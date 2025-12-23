@@ -9,7 +9,7 @@ class NewsParser:
     def __init__(self):
         self.headers = {'User-Agent': 'Mozilla/5.0'}
         self.recent_threshold = datetime.now() - timedelta(hours=24)
-        self.save_folder = "news_downloads"
+        self.save_folder = "data/raw/documents"
         
         if not os.path.exists(self.save_folder):
             os.makedirs(self.save_folder)
