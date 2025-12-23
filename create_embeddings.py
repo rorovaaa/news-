@@ -1,4 +1,4 @@
-simport sys
+import sys
 import os
 import json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +29,7 @@ def process_all_documents():
             filenames.append(filename)
 
         except Exception as e:
-            print(f"БРО ПИЗДА НИХУЯ НЕ РАЮОТАЕТ В ФАЙЛЕ {filename}: {e}")
+            print(f"не работает  {filename}: {e}")
     print(f"\nУспешно: {len(texts)} фалов ")
 
     embeddings = embedder.encode_batch(cleaned_texts)
